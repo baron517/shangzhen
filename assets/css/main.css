@@ -93,7 +93,7 @@ a{color:#333;}
 .orange{color:#ff6600!important;}
 .pd{padding:0 15px;}
 
-.img100{display: block;width:100%;}
+.full-img{display: block;width:100%;}
 
 html, body {
     position: relative;
@@ -107,7 +107,6 @@ html, body {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -120,4 +119,5 @@ html, body {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    position: relative;;
 }
