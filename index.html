@@ -12,8 +12,36 @@
 
     <style>
         .page-col{height:100%;}
-        .page-col1{position: absolute;width: 100%;left:0;top:0.4rem;}
-        .page1{background: url('assets/img/page1/page1.jpg') no-repeat center bottom;background-size:100% 100%;}
+        .page1{background: url('assets/img/page1/page1.jpg') no-repeat center bottom;}
+        .page2{background: url('assets/img/page2.jpg') no-repeat center bottom;}
+        .page3{background: url('assets/img/page3.jpg') no-repeat center bottom;}
+        .page4{background: url('assets/img/page4.jpg') no-repeat center bottom;}
+        .page5{background: url('assets/img/page5.jpg') no-repeat center bottom;}
+        .page6{background: url('assets/img/page6.jpg') no-repeat center bottom;}
+        .page7{background: url('assets/img/page7.jpg') no-repeat center bottom;}
+
+        .page8{background: url('assets/img/page8.jpg') no-repeat center bottom;}
+
+        .swiper-slide .wenzi{transition: all 1.5s ease-in 1s;opacity: 0;}
+        .swiper-slide .renwu{transition: all 1.5s ease-in 0s;opacity: 0;}
+
+        .swiper-slide-active .wenzi{opacity: 1;}
+        .swiper-slide-active .renwu{opacity: 1;}
+        .swiper-slide{background-size:100% 100%;}
+
+        .hongbao-list{width:100%;height:50%;position: absolute;left:0;top:41%;}
+        .hongbao-list div{width:25%;height:33.33%;float:left;}
+
+        .modal{display: block;position: fixed;left:0;top:0;width: 100%;height:100%;background: rgba(0,0,0,0.6);z-index:1000;display: none;
+
+
+
+        }
+
+        .modal-col{display: none;}
+
+        #open{position: absolute;width:80%;height:50%;top:27%;left:50%;margin-left:-40%;}
+
     </style>
 
 </head>
@@ -26,11 +54,8 @@
 
             <div class="page-col">
                 <div class="page-col1">
-                <img class="full-img" src="assets/img/page1/page1_02.png"/>
-                <img class="full-img" src="assets/img/page1/page1_03.png"/>
-                <img class="full-img" src="assets/img/page1/page1_04.png"/>
-                <img class="full-img" src="assets/img/page1/page1_05.png"/>
-                <img class="full-img" src="assets/img/page1/page1_06.png"/>
+                    <img class="full-img renwu" src="assets/img/page1/page1wz1.png">
+                    <img class="full-img wenzi" src="assets/img/page1/page1wz2.png">
                 </div>
             </div>
 
@@ -40,11 +65,79 @@
 
             <div class="page-col">
                 <div class="page-col2">
-                    <img class="full-img" src="assets/img/page1/page1_02.png"/>
-                    <img class="full-img" src="assets/img/page1/page1_03.png"/>
-                    <img class="full-img" src="assets/img/page1/page1_04.png"/>
-                    <img class="full-img" src="assets/img/page1/page1_05.png"/>
-                    <img class="full-img" src="assets/img/page1/page1_06.png"/>
+                    <img class="full-img renwu" src="assets/img/page2rw.png">
+                    <img class="full-img wenzi" src="assets/img/page2wz.png">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-slide page3">
+
+            <div class="page-col">
+                <div class="page-col2">
+                    <img class="full-img renwu" src="assets/img/page3rw.png">
+                    <img class="full-img wenzi" src="assets/img/page3wz.png">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-slide page4">
+
+            <div class="page-col">
+                <div class="page-col2">
+                    <img class="full-img renwu" data-src="assets/img/page4rw.png">
+                    <img class="full-img wenzi" data-src="assets/img/page4wz.png">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-slide page5">
+
+            <div class="page-col">
+                <div class="page-col2">
+                    <img class="full-img renwu" data-src="assets/img/page5rw.png">
+                    <img class="full-img wenzi" data-src="assets/img/page5wz.png">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-slide page6">
+
+            <div class="page-col">
+                <div class="page-col2">
+                    <img class="full-img renwu" data-src="assets/img/page6rw.png">
+                    <img class="full-img wenzi" data-src="assets/img/page6wz.png">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-slide page7">
+
+            <div class="page-col">
+                <div class="page-col2">
+                    <img class="full-img wenzi" data-src="assets/img/page7wz.png">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-slide page8">
+
+            <div class="page-col">
+                <div class="page-col2">
+
+                    <div class="hongbao-list">
+
+
+
+                    </div>
+
+
                 </div>
             </div>
 
@@ -55,14 +148,121 @@
 </div>
 
 
+<div class="modal" id="modal">
+
+    <div class="modal-col">
+    <div>
+        <img class="full-img" src="assets/img/modal/modalhongbao.png"/>
+        <img class="full-img" src="assets/img/modal/modalwz.png"/>
+    </div>
+
+    <img id="fullImg" class="full-img" />
+
+
+    <div id="open"></div>
+
+    </div>
+
+</div>
+
+
+<div class="modal" id="modal2">
+
+
+    <div class="modal-col">
+
+    <div>
+        <img class="full-img" data-src="assets/img/modal/modalTextBg.png"/>
+    </div>
+
+    <img id="fullImg2" class="full-img" />
+
+    </div>
+
+</div>
+
+<div class="modal" id="modal3">
+
+
+    <img  class="full-img" data-src="assets/img/page10.jpg" />
+
+
+
+</div>
+
+
+<div id="loadImg" class="hide">
+
+</div>
+
+
     <script src="assets/lib/jquery.js"></script>
     <script src="assets/lib/swiper.min.js"></script>
 
     <script>
 
+
+
         var swiper = new Swiper('.swiper-container', {
             direction: 'vertical'
         });
+
+
+        $(function()
+        {
+            $('[data-src]').each(function()
+            {
+
+                console.log($(this).attr("data-src"));
+                $(this).attr("src",$(this).attr("data-src"));
+
+
+            });
+        });
+
+
+
+        function randomSort3(arr){
+            arr.sort(function(a,b){
+                return Math.random() - 0.5;
+            });
+            return arr;
+        }
+        // 例子
+        var arr1 = [1,2,3,4,5,6,7,8,9,10,11,12];
+
+        console.log(randomSort3(arr1));
+        for(var i=0;i<arr1.length;i++)
+        {
+            $(".hongbao-list").append("<div data-id='"+arr1[i]+"'></div>")
+        }
+
+        $(".hongbao-list div").click(function()
+        {
+            $("#modal").show();
+            $("#fullImg").attr("src","assets/img/modal/modalIcon"+$(this).attr("data-id")+".png");
+            $("#fullImg").attr("data-id",$(this).attr("data-id"));
+            $("#modal .modal-col").fadeIn(1000);
+        });
+
+        $("#open").click(function()
+        {
+            $("#modal").hide();
+            $("#modal2").show();
+            $("#fullImg2").attr("src","assets/img/modal/modalText"+$("#fullImg").attr("data-id")+".png");
+            $("#modal2 .modal-col").fadeIn(1000);
+
+        });
+
+        $("#modal2").click(function()
+        {
+            $("#modal2").hide();
+            $("#modal3").show();
+
+        });
+
+
+
 
     </script>
 
